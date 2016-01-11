@@ -6,6 +6,12 @@ sub vcl_recv {
     }
 }
 
+sub vcl_error {
+    if (req.request == "OPTIONS") {
+        return (deliver);
+    }
+}
+
 sub vcl_deliver {
 
     # allow access from any domain (this can be replaced with your website's domain for increased security)
