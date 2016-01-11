@@ -8,17 +8,16 @@ sub vcl_recv {
     }
 }
 
-sub vcl_deliver {
-
-    # allow access from any domain (this can be replaced with your website's domain for increased security)
-    set resp.http.Access-Control-Allow-Origin = "*";
-
+sub vcl_synth {
     if (req.method == "OPTIONS") {
+
+        # allow access from any domain (this can be replaced with your website's domain for increased security)
+        set resp.http.Access-Control-Allow-Origin = "*";
 
         # tell the client to cache this response
         set resp.http.Access-Control-Max-Age = "1728000";
 
-        # allow client to ur GET/HEAD/OPTIONS requests
+        # allow client to do GET/HEAD/OPTIONS requests
         set resp.http.Access-Control-Allow-Methods = "GET, HEAD, OPTIONS";
 
         # allow the client to set a request header of "Range" to enable range requests
@@ -28,6 +27,12 @@ sub vcl_deliver {
         set resp.http.Content-Length = "0";
         set resp.http.Content-Type = "text/plain charset=UTF-8";
     }
+}
+
+sub vcl_deliver {
+
+    # allow access from any domain (this can be replaced with your website's domain for increased security)
+    set resp.http.Access-Control-Allow-Origin = "*";
 
     if (req.method == "HEAD") {
 
