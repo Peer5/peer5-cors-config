@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root version="1">
+    <Application>
+
+        <HTTPStreamer>
+            <!-- Properties defined here will override any properties defined in conf/HTTPStreamers.xml for any HTTPStreamer loaded by this applications -->
+            <Properties>
+                <Property>
+                    <Name>cupertinoUserHTTPHeaders</Name>
+                    <Value>ACCESS-CONTROL-ALLOW-ORIGIN:*|ACCESS-CONTROL-EXPOSE-HEADERS:content-length|ACCESS-CONTROL-ALLOW-HEADERS:range</Value>
+                    <Type>String</Type>
+                </Property>
+                <Property>
+                    <Name>mpegdashUserHTTPHeaders</Name>
+                    <Value>ACCESS-CONTROL-EXPOSE-HEADERS:content-length|ACCESS-CONTROL-ALLOW-HEADERS:range</Value>
+                    <Type>String</Type>
+                </Property>
+            </Properties>
+        </HTTPStreamer>
+
+    </Application>
+</Root>
