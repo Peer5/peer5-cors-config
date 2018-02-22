@@ -6,7 +6,7 @@ To allow requesting specific ranges of a video file from Javascript several conf
 ## CORS Configuration tab
 First You'll need to go to your **CORS configuration** tab under **Permissions**
 
-![Bucket Permissions Tab](./s3/aws1.png)
+![Bucket Permissions Tab](./aws1.png)
 
 ## Updating CORS rules
 
@@ -27,4 +27,4 @@ Example configuration:
 </CORSConfiguration>
 ```
 
-![Bucket Permissions Tab](./s3/aws2.png)
+![Bucket Permissions Tab](./aws2.png)
