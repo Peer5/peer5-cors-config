@@ -19,6 +19,7 @@ Example configuration:
   <CORSRule>
     <AllowedOrigin>*</AllowedOrigin>
     <AllowedMethod>GET</AllowedMethod>
+    <AllowedMethod>HEAD</AllowedMethod>
     <MaxAgeSeconds>3600</MaxAgeSeconds>
     <ExposeHeader>content-length</ExposeHeader>
     <ExposeHeader>content-range</ExposeHeader>
